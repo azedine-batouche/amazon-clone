@@ -1,0 +1,157 @@
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  z-index: 100;
+}
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  padding: 7px 7px 0px 7px;
+  margin-top: 2px;
+  border: 1px solid transparent;
+}
+.header__search {
+  display: flex;
+  position: relative;
+  flex: 1;
+  align-items: center;
+  border-radius: 4px;
+  /* overflow: hidden; */
+}
+.header__searchInput {
+  height: 12px;
+  padding: 15px;
+  padding-left: 165px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+.header__searchInput:focus {
+  /* outline: 2px solid #ff9900 !important; */
+  outline: none !important;
+  box-shadow: 0 0 0pt 2pt #ff9900 !important;
+}
+
+.header__searchIcon {
+  position: absolute;
+  right: 0;
+  height: 30px !important;
+  padding: 4px;
+  width: 32px !important;
+  background-color: #ff9900;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+.header__searchIcon:hover {
+  background-color: #ff9900c9;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 1px solid transparent;
+  color: #fff;
+  justify-content: center;
+  padding: 5px 8px;
+}
+.header__optionLineOne {
+  font-size: 10px;
+}
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+.header__location {
+  display: flex;
+  padding: 5px;
+  border: 1px solid transparent;
+  margin: 0px 10px;
+}
+.header__location:hover,
+.header__logo:hover,
+.header__option:hover {
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.location__ctn,
+.location__logo {
+  color: #fff;
+}
+.header__locationLogo {
+  display: flex;
+  align-items: flex-end;
+}
+.location__logo {
+  font-size: 10px;
+}
+.MuiButton-text {
+  position: absolute !important;
+  background-color: #eaeded !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-size: 12px !important;
+}
+.location__details {
+  display: flex;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+.location__details:last-child {
+  font-weight: 700;
+}
+.header__ButtonCategorie {
+  position: relative;
+}
+.header__categorieLogo {
+  position: absolute;
+  right: 3px;
+}
+.MuiButton-text {
+  padding: 5px 25px 4px 10px !important;
+}
+.categorie__menu {
+  top: 27px !important;
+}
+.categorie__menu {
+  min-width: 137px !important;
+}
+.baskets {
+  display: flex;
+  flex-direction: row;
+}
+.baskets__text {
+  font-weight: 700;
+  padding-top: 5px;
+  padding-top: 20px;
+}
+.baskets__ctn {
+  position: relative;
+}
+.baskets__icon {
+  font-size: 42px !important;
+}
+.baskets__Count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -106%);
+  color: #ff9900;
+  font-weight: 900;
+  font-size: 18px;
+  z-index: 2;
+  background-color: black;
+  border-radius: 50%;
+}
