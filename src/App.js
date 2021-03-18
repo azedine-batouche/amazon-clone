@@ -1,17 +1,28 @@
 import './App.css';
-import Header from "./components/header/Header";
+import Header from "./parts/header/Header";
+import Home from './pages/home/Home';
+import Checkout from './pages/checkout/Checkout';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './style/variables.css';
 
-import Home from './components/home/Home';
 
 
 function App() {
   return (
-    <div className="App">
-
+    <Router>
+      <div className="App">
       <Header />
-      <Home/>
+        <Switch>
+        <Route path="/checkout">
+            <Checkout/>
+          </Route>
+          <Route path="/">
+            <Home/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
 
-    </div>
   );
 }
 

@@ -1,0 +1,9 @@
+html{
+    /* COLORS */
+    --color-primary: #000;
+    --color-secondary: #f3a847;
+    --color-secondary--light: #febd69;
+    --color-gradient--light: #f7dfa5;
+    --color-gradient: #f0c14b;
+    --color-btn--hover: #f1c861;
+}
