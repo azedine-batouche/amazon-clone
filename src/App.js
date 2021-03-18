@@ -5,6 +5,8 @@ import Checkout from './pages/checkout/Checkout';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './style/variables.css';
 
+
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+
   );
 }
 
