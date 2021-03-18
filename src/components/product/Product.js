@@ -1,36 +1,46 @@
 import React from 'react'
 import './Product.css';
 import { IoIosStar } from "react-icons/io";
+import Button from '../button/Button';
+import { useStateValue } from "../../context/StateProvider";
 
-function Product({ item, image, price, nbStars }) {
-    
-//     const stars = [];
-//     let i = 0;
+function Product({id, title, image, price, rating }) {
+    const [{ basket }, dispatch] = useStateValue();
+    const addToBasket = () => {
+        dispatch({
+            type: 'ADD_TO_BASKET',
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating
+            }
+        })
+    }
 
-//   for (i; i<nbStars; i++) {
-//     stars.push(<p className="ctn__star"><IoIosStar/></p>)
-//   }
     return (
-        <div className="product">
+        <div className="product" key={id}>
             <div className="product__info">
-                <p>{ item }</p>
+                <p>{ title }</p>
                 <p className="product__price">
                     <small>$</small>
                     <strong>{ price }</strong>
                 </p>
                 <div className="product__rating">
-                    {Array(nbStars)
+                    {Array(rating)
                         .fill()
                         .map((_, i) => (
                              <IoIosStar />    
                         ))
-
                     }
-                    {/* { stars }   */}
                 </div>
             </div>
-            <img src= { image} alt="product__img" />
-            <button>Add to Basket</button>
+            <img src={image} alt="product__img" />
+            <Button 
+                content="Add to Basket"
+                click={addToBasket}
+            />
         </div>
     )
 }

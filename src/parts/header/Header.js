@@ -7,8 +7,12 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import { Link } from "react-router-dom";
+import { useStateValue } from '../../context/StateProvider';
 
 function Header() {
+    const [{ basket }, dispatch] = useStateValue();
+
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -20,7 +24,9 @@ function Header() {
     };
     return (
         <div className='header'>
-            <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="header_logo" />
+            <Link to="/">
+              <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="header_logo" />
+            </Link>
             <div className="header__location">
                 <div className="header__locationLogo">
                     <LocationOnOutlinedIcon className="location__logo"/>
@@ -69,13 +75,15 @@ function Header() {
                     <span className="header__optionLineOne">Your</span>
                     <span className="header__optionLineTwo">Prime</span>
                 </div>
-                <div className="header__option baskets">
-                    <div className="baskets__ctn">
-                        <ShoppingCartOutlinedIcon className="baskets__icon" />
-                        <span className="baskets__Count">0</span>
+                <Link to="/checkout">
+                    <div className="header__option baskets">
+                        <div className="baskets__ctn">
+                            <ShoppingCartOutlinedIcon className="baskets__icon" />
+                            <span className="baskets__Count">{ basket?.length }</span>
+                        </div>
+                         <span className="baskets__text">Cart</span>
                     </div>
-                    <span className="baskets__text">Panier</span>
-                </div>
+                </Link>
                                 
             </div>
        
