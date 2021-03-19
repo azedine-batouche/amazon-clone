@@ -65,6 +65,10 @@
   justify-content: center;
   padding: 5px 8px;
 }
+.header__link {
+  display: flex;
+  align-items: center;
+}
 .header__optionLineOne {
   font-size: 11px;
 }
