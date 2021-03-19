@@ -9,6 +9,8 @@ import LoginPage from './pages/login/LoginPage';
 import { auth } from "./config/firebase";
 import { useStateValue } from "./context/StateProvider";
 
+
+
 function App() {
   const [{}, dispatch] = useStateValue();
 
@@ -47,6 +49,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+
   );
 }
 
