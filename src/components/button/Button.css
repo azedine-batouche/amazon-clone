@@ -1,21 +1,23 @@
-.button{
-    background: linear-gradient(to bottom, var(--color-gradient--light), var(--color-gradient));
-    border: 1px solid;
-    margin-top: 10px;
-    padding: 2px 4px;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
-    cursor: pointer;
-    border-radius: 2px;
-    padding: 5px;
-    outline: none;
-    
+.button {
+  background: linear-gradient(
+    to bottom,
+    var(--color-gradient--light),
+    var(--color-gradient)
+  );
+  border: 1px solid;
+  margin-top: 10px;
+  padding: 2px 4px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 5px;
+  outline: none;
 }
-.button:hover{
-    background: var(--color-btn--hover);
+.button:hover {
+  background: var(--color-btn--hover);
 }
 .button:active,
-.button:focus,
-.button:visited{
-    box-shadow: 0px 0px 2px 2px var(--color-secondary) ;
+.button:visited {
+  box-shadow: 0px 0px 2px 2px var(--color-secondary);
 }

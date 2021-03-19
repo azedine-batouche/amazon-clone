@@ -1,0 +1,36 @@
+.inputGroup {
+  margin: 5px 0px;
+}
+.input__label {
+  margin-bottom: 5px;
+}
+.input {
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #a6a6a6;
+  padding: 3px 7px;
+  border-radius: 3px;
+  line-height: normal;
+  outline: 0;
+  width: 98%;
+}
+.input:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+.input__errors {
+  color: var(--color-error);
+  position: relative;
+  display: block;
+  font-size: 11px;
+  padding-left: 20px;
+  padding-top: 2px;
+  min-height: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.input__errorsIcon {
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  font-size: 11px;
+}
