@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/fonts/AmazonEmber_Bd.ttf';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
